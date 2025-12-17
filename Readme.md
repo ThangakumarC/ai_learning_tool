@@ -109,6 +109,15 @@ Rule-based features: dropout_rate, chapter order, difficulty_score
 
 Reasoning: Hybrid approach ensures both predictive power (ML) and interpretability (rule-based insights)
 
+## Live Demo
+
+The AI Learning Intelligence Tool is deployed on Render and can be accessed here:
+
+https://ai-learning-tool-6ygd.onrender.com/docs
+
+The link provides interactive API documentation where users can
+test the AI endpoints directly.
+
 ## Sample Input
 ```
 {
