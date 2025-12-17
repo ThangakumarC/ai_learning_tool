@@ -109,28 +109,41 @@ Rule-based features: dropout_rate, chapter order, difficulty_score
 
 Reasoning: Hybrid approach ensures both predictive power (ML) and interpretability (rule-based insights)
 
+## Sample Input
+```
+{
+  "student_id": "S101",
+  "course_id": "C01",
+  "chapter": 4,
+  "time_spent": 15,
+  "score": 35,
+  "completion_status" : 1
+}
+```
+## Output 
+```
+{
+  "student_id": "S101",
+  "completion_status": 1,
+  "completion_prediction": "NOT LIKELY",
+  "risk_flag": "HIGH",
+  "chapter_difficulty": "EASY",
+  "difficulty_score": 0.34,
+  "insights": [
+    "Low assessment score detected",
+    "Low engagement time mentioned",
+    "Student is at high risk of dropping out"
+  ]
+}
+```
 ## AI Usage Disclosure
 
 This project was developed in compliance with the assessment’s AI usage policy.
 
-A machine learning model is used to predict course completion.
-
-Rule-based analytics are used to compute chapter difficulty and generate human-readable insights.
-
-No sensitive or real user data is used; all datasets are synthetic and created for demonstration purposes.
-
-Predictions and insights are intended solely for learning and evaluation, not for real-world decision-making.
+A machine learning model is used to predict course completion. Rule-based analytics are used to compute chapter difficulty and generate human-readable insights. No sensitive or real user data is used; all datasets are synthetic and created for demonstration purposes. Predictions and insights are intended solely for learning and evaluation, not for real-world decision-making.
 
 ## Use of AI Tools
 
-This project was developed with the assistance of the AI tool ChatGPT, which was used to:
-
-Understand the problem statement and assessment requirements
-
-Clarify machine learning concepts and system architecture
-
-Guide deployment steps and API structuring
-
-Review code structure for correctness and clarity
+This project was developed with the assistance of the AI tool ChatGPT, which was used to: Understand the problem statement and assessment requirements, Clarify machine learning concepts and system architecture, Guide deployment steps and API structuring, Review code structure for correctness and clarity.
 
 All AI-generated suggestions were manually reviewed, understood, and adapted before implementation. Core application logic, system integration, and decision-making rules were implemented independently to ensure correctness and transparency, in accordance with the assessment guidelines.
