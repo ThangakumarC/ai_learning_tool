@@ -16,8 +16,8 @@ The **AI Learning Intelligence Tool** is an AI-powered system designed to assist
 ## AI System Architecture
 
 The system follows a modular architecture:
-
-    API Input (JSON)
+```
+      API Input (JSON)
             ↓
 Data Ingestion (FastAPI + Pydantic validation)
             ↓
@@ -30,7 +30,7 @@ ML Model Inference (predict course completion)
 Analytics & Insights (chapter difficulty, risk flags, human-readable insights)
             ↓
     JSON Output / Report
-
+```
 
 ## Installation & Setup
 
@@ -60,7 +60,7 @@ will be available at:  http://127.0.0.1:8080/docs
 ## Input Format
 
 Input must be sent as JSON to /analyze endpoint:
-
+```
 {
   "student_id": "S001",
   "course_id": "C01",
@@ -69,18 +69,20 @@ Input must be sent as JSON to /analyze endpoint:
   "score": 45,
   "completion_status": 0
 }
-
+```
 **Field Description:**
 
-Field	Type	Description
-student_id	string	Unique student identifier
-course_id	string	Course identifier
-chapter	int	Sequential chapter number
-time_spent	float	Time spent on chapter (minutes)
-score	float	Assessment score
-completion_status	int	Historical completion status (1=completed, 0=dropped)
+| Field             | Type   | Description                                                         |
+|------------------|--------|---------------------------------------------------------------------|
+| student_id       | string | Unique student identifier                                           |
+| course_id        | string | Course identifier                                                   |
+| chapter          | int    | Sequential chapter number                                           |
+| time_spent       | float  | Time spent on chapter (minutes)                                     |
+| score            | float  | Assessment score                                                    |
+| completion_status| int    | Historical completion status (1 = completed, 0 = dropped)           |
 
 ## Output Format
+```
 {
   "student_id": "S001",
   "completion_status": 0,
@@ -96,7 +98,7 @@ completion_status	int	Historical completion status (1=completed, 0=dropped)
     "Student has previously dropped out of this course"
   ]
 }
-
+```
 ## AI Model & Feature Details
 
 Model: Logistic Regression
