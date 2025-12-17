@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-The **AI Learning Intelligence Tool** is an AI-powered system designed to assist mentors and administrators in monitoring learners’ progress, predicting course completion, identifying at-risk students, and detecting difficult chapters. The tool integrates machine learning with rule-based analytics to provide interpretable insights for decision-making.
+The **AI Learning Intelligence Tool** is a backend, API-based AI system designed to assist mentors and administrators in monitoring learners’ progress, predicting course completion, identifying at-risk students, and detecting difficult chapters. The tool integrates machine learning with rule-based analytics and exposes its functionality via a FastAPI service to provide interpretable insights for decision-making.
 
 
 ## Features
